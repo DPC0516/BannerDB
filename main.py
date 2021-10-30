@@ -19,6 +19,7 @@ help_string = "This is bot for word, sentence ban system in discord" + \
               "\n!print_ban_w - prints banned words" + \
               "\n!help - prints help menu"
 
+
 class ChatBot(discord.Client):
 
     async def on_ready(self):
@@ -33,7 +34,7 @@ class ChatBot(discord.Client):
 
         message_str = message.content
         channel = message.channel
-        
+
         if message_str.find("!") != -1:
             if message.author.guild_permissions.administrator:
                 if message_str.find(command_ban_sentence) != -1:
